@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	<link rel="shortcut icon" href="https://i.imgur.com/Vt9Ildz.png">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+
+<style>
+
+
+
+/*--- CALENDAR - TESSISAMESS - 2020 ---*/
+/*-- Find more fun stuff at: tessisamess.insanejournal.com --*/
+
+/* REPLACEMENTS */
+
+:root{
+	--bg-color: #853717;
+	--bg-img: url()center fixed;
+	--overlay: rgba(255,255,255,0.9);
+
+	--borders: rgba(0,0,0,0.1);
+	--content: #fff;
+
+	--text: #222;
+	--alt-text: #fff;
+
+	--margin: 2px;
+	--padding: 5px;
+
+	--header-height: 120px;
+	--header-text: 27px;
+
+	--header-img1: url()center top;
+	--header-img2: url()center top;
+	--header-img3: url()center top;
+	--header-img4: url()center top;
+	--header-img5: url()center top;
+	--header-img6: url()center top;
+	--header-img7: url()center top;
+	--header-img8: url()center top;
+	--header-img9: url()center top;
+	--header-img10: url()center top;
+	--header-img11: url()center top;
+	--header-img12: url()center top;
+
+	--dayname-height: 35px;
+	--day-rows: 5;
+	--date-text: 9px;
+
+	--accent1: #853717;
+	--accent2: #FBE6CC;
+
+	--main-font: Open Sans,trebuchet ms,sans-serif;
+}
+
+
+/* GENERAL */
+
+::selection{background:var(--accent1);color:var(--lightest);}
+::-moz-selection{background:var(--accent1);color:var(--lightest);}
+
+*{box-sizing:border-box;}
+html{background:var(--bg-color) var(--bg-img);background-size:cover;}
+body{margin:0;padding:0 0 3vw 0;background:var(--overlay);font-family:var(--main-font);color:var(--text);font-size:12px;line-height:1.5;}
+
+img{max-width:100%;}
+
+a{text-decoration:none;color:var(--accent1);-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;-ms-transition:all 0.5s ease-in-out;-o-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}
+a:hover{color:var(--accent2);}
+
+#credit{position:fixed;left:10px;bottom:10px;font-weight:bold;font-size:8px;text-transform:uppercase;letter-spacing:3px;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;color:var(--accent1);}
+
+
+/* CONTAINER */
+
+.calendar{width:calc(100vw - 6vw);max-width:1300px;display:flex;flex-wrap:wrap;text-align:center;margin:0 auto;padding:3vw 0 0 0;}
+
+
+/* MONTH HEADER */
+
+header{width:100%;margin:var(--margin);height:var(--header-height);display:flex;align-items:center;justify-content:center;background-size:cover!important;color:#fff;font-size:var(--header-text);line-height:1;letter-spacing:5px;text-shadow:1px 1px 1px rgba(0,0,0,0.5);text-transform:uppercase;}
+
+.calendar:nth-of-type(1) header{background:var(--accent1) var(--header-img1);}
+.calendar:nth-of-type(2) header{background:var(--accent1) var(--header-img2);}
+.calendar:nth-of-type(3) header{background:var(--accent1) var(--header-img3);}
+.calendar:nth-of-type(4) header{background:var(--accent1) var(--header-img4);}
+.calendar:nth-of-type(5) header{background:var(--accent1) var(--header-img5);}
+.calendar:nth-of-type(6) header{background:var(--accent1) var(--header-img6);}
+.calendar:nth-of-type(7) header{background:var(--accent1) var(--header-img7);}
+.calendar:nth-of-type(8) header{background:var(--accent1) var(--header-img8);}
+.calendar:nth-of-type(9) header{background:var(--accent1) var(--header-img9);}
+.calendar:nth-of-type(10) header{background:var(--accent1) var(--header-img10);}
+.calendar:nth-of-type(11) header{background:var(--accent1) var(--header-img11);}
+.calendar:nth-of-type(12) header{background:var(--accent1) var(--header-img12);}
+
+
+/* DAY HEADERS */
+
+.dayname{background:var(--accent2);height:var(--dayname-height);display:flex;align-items:center;justify-content:center;color:var(--accent1);align-self:flex-start;text-transform:uppercase;letter-spacing:1px;}
+
+
+/* DAYS */
+
+.block{width:calc((100% / 7) - (var(--margin) * 2));border:1px solid var(--borders);margin:var(--margin);}
+
+.spacer{border:1px dashed var(--borders);opacity:0.5;}
+
+.day{background:var(--content);padding:var(--padding);height:calc(((100vh - var(--header-height) - var(--dayname-height) - 6vw) - ((var(--margin) * 2) * var(--day-rows))) / var(--day-rows));}
+
+.date{display:block;text-align:right;font-size:var(--date-text);}
+.icon{margin:0 0 -3px 0;max-height:16px;max-width:16px;}
+.day a{font-weight:bold;}
+
+</style>
+
+
+</head>
+
+<body>
+
+	<!--COPY & PASTE ENTIRE CALENDAR ARTICLE AS NEEDED FOR NEW MONTHS-->
+
+	<article class="calendar">
+
+		<!-- MONTH HEADER -->
+		<header><b>Month</b> 2020</header>
+
+		<!-- DAY HEADERS -->
+		<b class="dayname block">Sunday</b>
+		<b class="dayname block">Monday</b>
+		<b class="dayname block">Tuesday</b>
+		<b class="dayname block">Wednesday</b>
+		<b class="dayname block">Thursday</b>
+		<b class="dayname block">Friday</b>
+		<b class="dayname block">Saturday</b>
+
+		<!-- DAYS -->
+		<div class="spacer block"></div>
+
+		<div class="day block">
+			<b class="date">1</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">2</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">3</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">4</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">5</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">6</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">7</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">8</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">9</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">10</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">11</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">12</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">13</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">14</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">15</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">16</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">17</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">18</b>
+            
+		</div>
+
+		<div class="day block">
+			<b class="date">19</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">20</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">21</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">22</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">23</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">24</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">25</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">26</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">27</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">28</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">29</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">30</b>
+		</div>
+
+		<div class="day block">
+			<b class="date">31</b>
+		</div>
+
+	</article>
+
+
+
+
+	<!-- CREDIT - DO NOT REMOVE  -->
+	<a href="http://tessisamess.insanejournal.com/" id="credit">TESSISAMESS</a>
+
+
+</body>
+</html>
